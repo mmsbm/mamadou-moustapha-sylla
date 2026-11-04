@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smile It's Sunnah | Porte ta foi, porte ton sourire</title>
+  <meta name="description" content="Smile It's Sunnah, marque de vêtements et d'accessoires alliant élégance, simplicité et modernité. Commandez directement sur WhatsApp.">
+  <meta property="og:title" content="Smile It's Sunnah">
+  <meta property="og:description" content="Porte ta foi, porte ton sourire. Vêtements et accessoires, commande sur WhatsApp.">
+  <meta property="og:image" content="images/lookbook/lookbook-duo.jpg">
+  <meta name="theme-color" content="#0E0E0E">
+  <link rel="icon" type="image/png" href="images/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="annonce">
+    <p>Commande simple et rapide sur WhatsApp<span class="annonce__extra"> &nbsp;|&nbsp; Conseil personnalisé</span></p>
+  </div>
+
+  <header class="entete" id="entete">
+    <div class="entete__inner">
+      <button class="icone-btn entete__menu" id="ouvrirMenu" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+
+      <nav class="nav nav--gauche" aria-label="Catégories">
+        <a href="#boutique" data-filtre="pantalons">Pantalons</a>
+        <a href="#boutique" data-filtre="crop-tops">Crop tops</a>
+        <a href="#boutique" data-filtre="debardeurs">Débardeurs</a>
+        <a href="#boutique" data-filtre="t-shirts">T-shirts</a>
+      </nav>
+
+      <a href="#accueil" class="logo" aria-label="Smile It's Sunnah, accueil">
+        <img src="images/brand/logo-symbole-noir.png" alt="" width="740" height="542">
+        <span class="logo__texte">Smile It's Sunnah</span>
+      </a>
+
+      <nav class="nav nav--droite" aria-label="Navigation">
+        <a href="#boutique" data-filtre="accessoires">Accessoires</a>
+        <a href="#maison">La maison</a>
+        <a href="#commander">Commander</a>
+      </nav>
+
+      <button class="icone-btn entete__panier" id="ouvrirPanier" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="compteur" id="compteurPanier">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div class="menu-mobile" id="menuMobile" aria-hidden="true">
+    <div class="menu-mobile__haut">
+      <img src="images/brand/logo-symbole-noir.png" alt="Smile It's Sunnah" class="menu-mobile__logo">
+      <button class="icone-btn" data-fermer-menu aria-label="Fermer le menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <nav class="menu-mobile__liens">
+      <a href="#boutique" data-filtre="tout">Toute la collection</a>
+      <a href="#boutique" data-filtre="pantalons">Pantalons</a>
+      <a href="#boutique" data-filtre="crop-tops">Crop tops</a>
+      <a href="#boutique" data-filtre="debardeurs">Débardeurs</a>
+      <a href="#boutique" data-filtre="t-shirts">T-shirts</a>
+      <a href="#boutique" data-filtre="accessoires">Accessoires</a>
+      <a href="#maison">La maison</a>
+      <a href="#commander">Comment commander</a>
+    </nav>
+  </div>
+
+  <main id="accueil">
+
+    <!-- Hero -->
+    <section class="hero">
+      <img class="hero__image" src="images/lookbook/lookbook-duo.jpg" alt="Collection Smile It's Sunnah portée en boutique">
+      <div class="hero__voile"></div>
+      <div class="hero__contenu">
+        <p class="surtitre surtitre--or">Nouvelle collection</p>
+        <h1>Porte ta foi,<br>porte ton sourire.</h1>
+        <p class="hero__texte">Des pièces élégantes, simples et modernes, pensées pour affirmer ton style et partager une attitude positive.</p>
+        <div class="hero__actions">
+          <a href="#boutique" class="btn btn--or" data-filtre="tout">Découvrir la collection</a>
+          <a href="#" class="btn btn--contour-clair" data-whatsapp-direct>Nous écrire sur WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section categories" id="categories">
+      <div class="conteneur">
+        <div class="titre-section">
+          <p class="surtitre">Les catégories</p>
+          <h2>Trouve ta pièce</h2>
+        </div>
+        <div class="categories__grille" id="grilleCategories"></div>
+      </div>
+    </section>
+
+    <!-- Boutique -->
+    <section class="section boutique" id="boutique">
+      <div class="conteneur">
+        <div class="titre-section">
+          <p class="surtitre">La boutique</p>
+          <h2>La collection</h2>
+        </div>
+        <div class="filtres" id="filtres" role="tablist" aria-label="Filtrer par catégorie"></div>
+        <div class="grille-produits" id="grilleProduits"></div>
+      </div>
+    </section>
+
+    <!-- Manifeste -->
+    <section class="manifeste" id="maison">
+      <div class="conteneur manifeste__inner">
+        <img src="images/brand/logo-blanc.png" alt="Smile It's Sunnah" class="manifeste__logo" width="776" height="709">
+        <p class="surtitre surtitre--or">La maison</p>
+        <h2>Bien plus qu'une marque,<br>un sourire à partager.</h2>
+        <div class="manifeste__texte">
+          <p>Smile It's Sunnah est une marque de vêtements et d'accessoires qui associe élégance, simplicité et modernité. Nous proposons des articles tendance et soigneusement sélectionnés pour permettre à chacun d'affirmer son style tout en restant fidèle à sa personnalité.</p>
+          <p>Mais Smile It's Sunnah, c'est aussi une philosophie : celle du sourire. Pour nous, le sourire est bien plus qu'une simple expression du visage. C'est un langage universel, un symbole de joie, de paix, de bienveillance et de positivité.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valeurs -->
+    <section class="section valeurs">
+      <div class="conteneur valeurs__grille">
+        <div class="valeurs__image">
+          <img src="images/lookbook/lookbook-boutique.jpg" alt="Clients Smile It's Sunnah en boutique" loading="lazy">
+        </div>
+        <div class="valeurs__contenu">
+          <p class="surtitre">Notre philosophie</p>
+          <h2>Un style, une attitude, un sourire.</h2>
+          <p>Inspirée par les belles valeurs de la Sunnah, notre marque souhaite rappeler qu'un sourire est une belle forme de générosité et qu'il peut faire toute la différence. Il a le pouvoir de rapprocher les personnes, de transmettre de bonnes énergies et d'illuminer même les journées les plus ordinaires.</p>
+          <blockquote>
+            « Ton sourire à ton frère est une aumône. »
+            <cite>Hadith rapporté par At-Tirmidhi</cite>
+          </blockquote>
+          <ul class="valeurs__liste">
+            <li><span>Élégance</span>Des coupes soignées et intemporelles.</li>
+            <li><span>Confiance</span>Des pièces qui affirment ta personnalité.</li>
+            <li><span>Partage</span>Une énergie positive à transmettre.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commander -->
+    <section class="section commander" id="commander">
+      <div class="conteneur">
+        <div class="titre-section">
+          <p class="surtitre">Commander</p>
+          <h2>Simple, rapide, personnel</h2>
+        </div>
+        <ol class="etapes">
+          <li>
+            <span class="etapes__num">01</span>
+            <h3>Choisis tes pièces</h3>
+            <p>Sélectionne la couleur, la taille et la quantité, puis ajoute l'article à ton panier.</p>
+          </li>
+          <li>
+            <span class="etapes__num">02</span>
+            <h3>Envoie sur WhatsApp</h3>
+            <p>Ton panier est transmis automatiquement en un message clair et détaillé.</p>
+          </li>
+          <li>
+            <span class="etapes__num">03</span>
+            <h3>Reçois ta commande</h3>
+            <p>Nous confirmons la disponibilité, le prix total et organisons la livraison avec toi.</p>
+          </li>
+        </ol>
+        <div class="commander__cta">
+          <a href="#" class="btn btn--noir" data-whatsapp-direct>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-wa"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Une question ? Écris-nous
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur pied__grille">
+      <div class="pied__marque">
+        <img src="images/brand/logo-blanc.png" alt="Smile It's Sunnah" width="776" height="709">
+        <p>Porte ta foi, porte ton sourire.</p>
+      </div>
+      <div>
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#boutique" data-filtre="pantalons">Pantalons</a></li>
+          <li><a href="#boutique" data-filtre="crop-tops">Crop tops</a></li>
+          <li><a href="#boutique" data-filtre="debardeurs">Débardeurs</a></li>
+          <li><a href="#boutique" data-filtre="t-shirts">T-shirts</a></li>
+          <li><a href="#boutique" data-filtre="accessoires">Accessoires</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>La maison</h4>
+        <ul>
+          <li><a href="#maison">Notre histoire</a></li>
+          <li><a href="#commander">Comment commander</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#" data-whatsapp-direct>WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="conteneur pied__bas">
+      <p>&copy; <span id="annee"></span> Smile It's Sunnah. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Fiche produit -->
+  <div class="fenetre" id="fiche" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ficheNom">
+    <div class="fenetre__fond" data-fermer-fiche></div>
+    <div class="fiche">
+      <button class="icone-btn fiche__fermer" data-fermer-fiche aria-label="Fermer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="fiche__visuel">
+        <img id="ficheImage" src="" alt="">
+      </div>
+      <div class="fiche__infos">
+        <p class="surtitre" id="ficheCategorie"></p>
+        <h3 id="ficheNom"></h3>
+        <p class="fiche__prix" id="fichePrix"></p>
+        <p class="fiche__desc" id="ficheDescription"></p>
+
+        <div class="option">
+          <p class="option__label">Couleur : <strong id="ficheCouleurNom"></strong></p>
+          <div class="pastilles" id="fichePastilles"></div>
+        </div>
+
+        <div class="option">
+          <p class="option__label">Taille</p>
+          <div class="tailles" id="ficheTailles"></div>
+        </div>
+
+        <div class="option">
+          <p class="option__label">Quantité</p>
+          <div class="quantite">
+            <button type="button" id="qteMoins" aria-label="Diminuer">&minus;</button>
+            <span id="qteValeur">1</span>
+            <button type="button" id="qtePlus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+
+        <p class="fiche__erreur" id="ficheErreur" role="alert"></p>
+
+        <div class="fiche__actions">
+          <button class="btn btn--noir btn--plein" id="ajouterPanier">Ajouter au panier</button>
+          <button class="btn btn--or btn--plein" id="commanderDirect">Commander sur WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panier -->
+  <div class="tiroir" id="panier" aria-hidden="true">
+    <div class="tiroir__fond" data-fermer-panier></div>
+    <aside class="tiroir__panneau" role="dialog" aria-modal="true" aria-labelledby="panierTitre">
+      <div class="tiroir__haut">
+        <h3 id="panierTitre">Ton panier</h3>
+        <button class="icone-btn" data-fermer-panier aria-label="Fermer le panier">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="tiroir__liste" id="panierListe"></div>
+      <div class="tiroir__bas">
+        <div class="tiroir__total"><span>Total</span><strong id="panierTotal">0 FCFA</strong></div>
+        <p class="tiroir__note">Ta commande sera envoyée sur WhatsApp. Nous te confirmerons la disponibilité et la livraison.</p>
+        <button class="btn btn--or btn--plein" id="envoyerPanier">Commander sur WhatsApp</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <a href="#" class="wa-flottant" data-whatsapp-direct aria-label="Contacter Smile It's Sunnah sur WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  </a>
+
+  <script src="js/produits.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
